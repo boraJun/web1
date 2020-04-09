@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var coworkers = {
+        "programmer":"bbbb",
+        "designer":"rrrr"
+      };
+      coworkers.daebak = "짱이다";
+
+      coworkers["띄어쓰기도 된다"] = "정말요?";
+      document.write("programmer : " + coworkers.programmer + "<br>");
+      document.write("designer : " + coworkers.designer + "<br>");
+      document.write("daebak : " + coworkers.daebak + "<br>");
+      document.write("띄어쓰기도 된다 : " + coworkers["띄어쓰기도 된다"] + "<br>");
+
+
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+      coworkers.showAll = function(){
+        for(key in this){
+          document.write(key +" : " + this[key] + "<br>");
+        }
+      }
+
+      coworkers.showAll();
+    </script>
+  </body>
+</html>

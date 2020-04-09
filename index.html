@@ -3,23 +3,57 @@
   <head>
     <title>WEB</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="colors.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body style="background-color:white; color:black">
     <h1><a href="index.html" target="_blank">WEB</a></h1>
-    <ol>
-      <li><a href="1.html" target="_blank">HTML</a></li>
-      <li><a href="2.html" target="_blank">CSS</a></li>
-      <li><a href="3.html" target="_blank">JavaScript</a></li>
-    </ol>
-    <h2>오늘의 공부</h2>
-    <p>전보라는 지금 <strong>웹페이지를 만드는 <u><a href="https://www.naver.com/" target="_blank" title="just naver">html</a></u></strong>을 배우고 있습니다.
-    <br>학교다닐때도 만들었잖아요?
-    <br>근데 또 봅니다.
-    <br>똑똑해지도록 하세요.</p>
-    <img src ="peace.jpg" width ="100%">
-    <p style="margin-top:40px;">정보를 추가하라고 하는데 그냥 딱히 쓸 말도 없고,,,,,,
-    <br>그냥 대강 아무거나 적어보겠습니다.
-    <br>졸리네요,,,,잠들고싶습니다,,,
-    <br>집에가고싶어요,,,,</p>
+
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+
+      <div id="article">
+        <input type="button" value="night" onclick="
+          var allList = document.querySelectorAll('a');
+
+          for(var i = 0; i < allList.length; i++)
+            allList[i].style.color = 'powderblue';
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white';
+        ">
+        <input type="button" value="day" onclick="
+          var allList = document.querySelectorAll('a');
+
+          for(var i = 0; i < allList.length; i++)
+            allList[i].style.color = 'blue';
+
+          document.querySelector('body').style.backgroundColor = 'white';
+          document.querySelector('body').style.color = 'black';
+        ">
+
+        <input id="night_day" type="button"  value="day" onclick="
+          nightdayHandler(this);
+        ">
+
+        <input id="night_day" type="button"  value="day" onclick="
+          nightdayHandler(this);
+        ">
+        <h2>HTML에 대하여</h2>
+        <p>전보라는 지금 <strong>웹페이지를 만드는 <u><a href="https://www.naver.com/" target="_blank" title="just naver">html</a></u></strong>을 배우고 있습니다.
+        <br>학교다닐때도 만들었잖아요?
+        <br>근데 또 봅니다.
+        <br>똑똑해지도록 하세요.</p>
+        <img src ="peace.jpg" width ="100%">
+        <p style="margin-top:40px;">정보를 추가하라고 하는데 그냥 딱히 쓸 말도 없고,,,,,,
+        <br>그냥 대강 아무거나 적어보겠습니다.
+        <br>졸리네요,,,,잠들고싶습니다,,,
+        <br>집에가고싶어요,,,,</p>
+      <div>
+    </div>
   </body>
 </html>
